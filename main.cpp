@@ -82,6 +82,111 @@ int main(int argc, char** argv) {
 		}
 	}
 	
+	//Powers, Roots, Logarithms
+	else if (choice == 3)
+	{
+		system("cls");
+		cout << "Powers, Roots, Logarithms:\n\n";
+		float number;
+		int submenu;
+		
+		cout<< "1 - Pow\n";
+		cout<< "2 - Sqrt\n";
+		cout<< "3 - Log\n";
+		cout<< "4 - Log10\n";
+		cout<< "5 - Exp\n\n";
+		
+		cout << "Function: ";
+		cin >> submenu;
+		cout<< endl;
+		
+	//	cout << "Your number: ";
+	//	cin >> number;
+	//	cout<<endl;
+		
+		if (submenu == 1)
+		{
+			int base, power;
+			cout << "Base: ";
+			cin >> base;
+			cout<<endl;
+			cout << "Power: ";
+			cin >> power;
+			cout<<endl;
+			
+			cout << "Pow: " << pow(base, power) << endl;	
+		}
+		if (submenu == 2)
+		{	
+			cout << "Your number: ";
+			cin >> number;
+			try
+			{
+				if (number < 0)
+				{
+					throw "Can't take sqrt of negative number";
+				}
+			}
+			catch(const char* exception)
+			{
+				cerr << "Error: " << exception << '\n';
+			}
+			
+			cout<<endl;	
+			
+			cout << "Sqrt: " << sqrt(number) << endl;
+		}
+		if (submenu == 3)
+		{	
+			cout << "Your number: ";
+			cin >> number;
+			try
+			{
+				if (number < 0)
+				{
+					throw "Can't take sqrt of negative number";
+				}
+			}
+			catch(const char* exception)
+			{
+				cerr << "Error: " << exception << '\n';
+			}
+			cout<<endl;	
+			cout << "Log: " << log(number) << endl;
+		}
+		if (submenu == 4)
+		{	
+			cout << "Your number: ";
+			cin >> number;
+			try
+			{
+				if (number < 0)
+				{
+					throw "Can't take sqrt of negative number";
+				}
+			}
+			catch(const char* exception)
+			{
+				cerr << "Error: " << exception << '\n';
+			}
+			cout<<endl;	
+			cout << "E: " << log10(number)<< endl;
+		}
+		if (submenu == 5)
+		{	
+			cout << "Your number: ";
+			cin >> number;
+			cout<<endl;	
+			cout << "E: " << exp(number)<< endl;
+		}		
+	}
+	// Min/Max time code 20:54
+	else if (choice == 4)
+	{
+		
+	}
+	
+	
 	system("pause");
 	return 0;
 }
